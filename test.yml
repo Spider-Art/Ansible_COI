@@ -1,0 +1,12 @@
+---
+- name: testopenstack
+  host: localhost
+  connection: local
+  tasks:
+    - name: identity_user_info
+      openstack.cloud.identity_user_info:
+        cloud: awesomecloud
+      register: result
+    - name: identity_user_debug 
+      debug:
+        msg: "{{ result.openstack_users }}"
