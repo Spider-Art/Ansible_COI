@@ -1,6 +1,6 @@
 ---
 - name: testopenstack
-  host: localhost
+  hosts: localhost
   connection: local
   tasks:
     - name: identity_user_info
